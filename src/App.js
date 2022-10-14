@@ -72,6 +72,7 @@ function App() {
       .then(res=>{
         return res.blob();
       })
+      /* Convert the dog url to an image */
       .then(blob=>{
         var file = new File([blob], 'doggy.jpg', {type: blob.type});
         setToFile(file);
